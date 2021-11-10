@@ -11,17 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- sezione mail -->
+    
     <div class="container">
-        <div class="row">
+        <!-- sezione mail -->
+        <div class="row mail">
             <label for="mail">Inserisci la tua mail</label>
             <input type="email" id="mail" placeholder="Inserisci e-mail">
             <div class="message"></div>
             <button class="btn">Verifica accesso</button>
         </div>
-    </div>
-    <!-- sezione dadi -->
 
+        <!-- sezione dadi -->
+        <div class="row table">
+            <div id="num_pc" class="dado"></div>
+            <div id="messaggio">Premi gioca per tirare i dadi!</div>
+            <div id="num_utente" class="dado"></div>
+            <button class="btn">Gioca</button>
+        </div>
+    </div>
+    
 
     <script src="js/script.js"></script>
 </body>

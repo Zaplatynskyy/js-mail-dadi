@@ -2,8 +2,8 @@
 // * Gioco dei dadi Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 // Controllo email
-let button = document.querySelector('.btn');
-const emailUtenti = ['pippo@gmail.com', 'pluto@gmail.com', 'paperino@gmail.com', 'qui90@gmail.it', 'quo90@hotmail.com', 'qua90@hotmail.it'];
+let button = document.querySelector('.row.mail .btn');
+let emailUtenti = ['pippo@gmail.com', 'pluto@gmail.com', 'paperino@gmail.com', 'qui90@gmail.it', 'quo90@hotmail.com', 'qua90@hotmail.it'];
 
 button.addEventListener("click",
     function() {
@@ -32,22 +32,29 @@ button.addEventListener("click",
 );
 
 // Gioco a dadi
-let numeroPc = Math.floor(Math.random() * 6 + 1);
-let numeroUtente = Math.floor(Math.random() * 6 + 1);
 
-console.log('risultato del computer', numeroPc);
-console.log('risultato dell\'utente', numeroUtente);
+let play = document.querySelector('.row.table .btn');
+play.addEventListener("click",
+    function () {
+        let numeroPc = Math.floor(Math.random() * 6 + 1);
+        let numeroUtente = Math.floor(Math.random() * 6 + 1);
+        document.getElementById('num_pc').innerHTML = numeroPc;
+        document.getElementById('num_utente').innerHTML = numeroUtente;
+        
+        let messaggio = document.getElementById('messaggio');
+        messaggio.innerHTML = 'Pareggio!!';
+        messaggio.className = 'orange';
 
-if (numeroPc < numeroUtente) {
-    console.log('Hai vinto!!!');
+        if (numeroPc < numeroUtente) {
+            messaggio.innerHTML = 'Hai vinto!!!';
+            messaggio.className = 'green';
 
-} else if (numeroPc > numeroUtente) {
-    console.log('Hai perso!');
-
-} else if (numeroPc == numeroUtente) {
-    console.log('Pareggio!!');
-    
-}
+        } else if (numeroPc > numeroUtente) {
+            messaggio.innerHTML = 'Hai perso!';
+            messaggio.className = 'red';
+        } 
+    }
+);
 
 
 
