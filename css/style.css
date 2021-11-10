@@ -49,5 +49,16 @@ body {
     padding: 5px;
 }
 
+.message {
+    margin-bottom: 10px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
 
 /* ******DADI****** */

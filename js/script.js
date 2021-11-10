@@ -7,7 +7,7 @@ const emailUtenti = ['pippo@gmail.com', 'pluto@gmail.com', 'paperino@gmail.com',
 button.addEventListener("click",
     function() {
         let emailUtente = document.getElementById('mail').value;
-        console.log('Email inserita: ' + emailUtente);
+        const message = document.querySelector('.message');
 
         let booleano = false;
 
@@ -18,9 +18,11 @@ button.addEventListener("click",
         } 
 
         if (booleano) {
-            console.log('accesso consentito');
+            message.classList.add('green');
+            message.innerHTML = 'Accesso Consentito';
         } else {
-            console.log('accesso non consentito');
+            message.classList.add('red');
+            message.innerHTML = 'Accesso NON Consentito';
         }
         
     }
