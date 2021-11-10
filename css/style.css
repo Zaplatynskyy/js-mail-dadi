@@ -10,9 +10,16 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/craps-online-1.jpg');
+    background-size: cover;
     padding: 50px 0;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -27,7 +34,7 @@ body {
 }
 
 .btn:hover {
-    opacity: .8;
+    opacity: .9;
 }
 
 .red {
@@ -47,7 +54,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+}
+
+.row.mail {
+    width: 400px;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    padding: 20px 50px;
+}
+
+.row.mail.display_off {
+    display: none;
 }
 
 .row label[for="mail"] {
@@ -63,21 +81,33 @@ body {
 }
 
 .message {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 /* ******DADI****** */
+.row.table {
+    width: 40%;
+    padding: 5px;
+    display: none;
+}
+
+.row.table.display_on {
+    display: flex;
+}
 
 .row.table .dado {
-    width: 10vw;
-    height: 10vw;
-    line-height: 10vw;
-    font-size: 40px;
+    width: 5vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 15px;
+    color: white;
+    background-color: red;
+    border: 3px solid black;
+    border-radius: 5px;
     margin: 20px;
 }
 
@@ -88,4 +118,7 @@ body {
 #messaggio {
     font-size: 32px;
     font-weight: bold;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 15px;
+    padding: 20px;
 }

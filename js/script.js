@@ -22,6 +22,8 @@ button.addEventListener("click",
         if (booleano) {
             message.classList.add('green');
             message.innerHTML = 'Accesso Consentito';
+            document.querySelector('.row.table').classList.add('display_on');
+            document.querySelector('.row.mail').classList.add('display_off');
         } else {
             message.classList.add('red');
             message.innerHTML = 'Accesso NON Consentito';
