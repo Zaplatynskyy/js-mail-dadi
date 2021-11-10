@@ -5,6 +5,49 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 60%;
+    padding: 50px 0;
+    margin: auto;
+}
+
+.btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .8;
+}
+
 /* ******MAIL****** */
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row label[for="mail"] {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.row input[type="email"] {
+    width: 250px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+}
+
 
 /* ******DADI****** */
